@@ -1,24 +1,24 @@
-# Installing gh on Linux and BSD
+# تثبيت GH على Linux و BSD
 
 Packages downloaded from https://cli.github.com or from https://github.com/cli/cli/releases
 are considered official binaries. We focus on popular Linux distros and
-the following CPU architectures: `i386`, `amd64`, `arm64`, `armhf`.
+     بنى وحدة المعالجة المركزية التالية:   'AMD64.  `ذراع64.'ذراع64.'. 
 
 Other sources for installation are community-maintained and thus might lag behind
 our release schedule.
 
-## Official sources
+## المصادر الرسمية.
 
-### Debian, Ubuntu Linux, Raspberry Pi OS (apt)
+### دبيان، أوبونتو لينكس، التوت بي أوس (أبت)
 
 Install:
 
-```bash
-(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
-	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
-        && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
-        && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
-	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+"باش..
+(اكتب -p wget >/dev/null || (تحديث Sudo Apt & Sudo Apt-Get install WGET -y)) \
+ &&سودو مكدير -p -m 755 /etc/apt/keyrings \
+ && out=$ (mktemp) & wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+ && cat $out | Sudo Tee / EtC/APT/KEYRINGS/GITHUBCLI-Archive-KEYRING.GPG > / Dev/Null \
+ &&سودو chmod GO+R /ETC/APT/KEYRINGS/GITHUBCLI-Archive-KEYRING.GPG \
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& sudo apt update \
 	&& sudo apt install gh -y
